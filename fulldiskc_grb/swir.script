@@ -1,0 +1,4 @@
+#!/bin/tcsh 
+foreach file ( /home/poker/amazon/*/OR_ABI-L1b-RadF-M6C07_G16_s2019* )
+/home/poker/miniconda3/envs/goes16_201710/bin/python goes16_GRB_fulldisk_swir_oneoff.py $file
+end

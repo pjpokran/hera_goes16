@@ -1,0 +1,15 @@
+
+gulf_image_crop_top=1073
+gulf_image_crop_bottom=-310
+gulf_image_crop_left=1174
+gulf_image_crop_right=-226
+
+gulf_image_size_y=(image_rows+gulf_image_crop_bottom-gulf_image_crop_top)
+gulf_image_size_x=(image_columns+gulf_image_crop_right-gulf_image_crop_left)
+
+print("gulf image size")
+print(gulf_image_size_x, gulf_image_size_y)
+
+gulf_image_size_x=float(gulf_image_size_x)/60.
+gulf_image_size_y=float(gulf_image_size_y)/60.
+

@@ -1,0 +1,39 @@
+# commented all out Nov 30 while GOES moves
+#4,9,14,19,24,29,34,39,44,49,54,59 * * * * /home/poker/goes16/conusc_4panel/run_wv_4panel.sh
+#4,9,14,19,24,29,34,39,44,49,54,59 * * * * /home/poker/goes16/conusc/run_ircm.sh
+#4,9,14,19,24,29,34,39,44,49,54,59 * * * * /home/poker/goes16/conusc/run_wv.sh
+#4,9,14,19,24,29,34,39,44,49,54,59 * * * * /home/poker/goes16/conusc/run_wvl.sh
+#4,9,14,19,24,29,34,39,44,49,54,59 * * * * /home/poker/goes16/conusc/run_wvh.sh
+#4,9,14,19,24,29,34,39,44,49,54,59 * * * * /home/poker/goes16/conusc/run_cirrus.sh
+#4,9,14,19,24,29,34,39,44,49,54,59 * * * * /home/poker/goes16/conusc/run_snowice.sh
+#4,9,14,19,24,29,34,39,44,49,54,59 * * * * /home/poker/goes16/conusc/run_cldpartsize.sh
+#2,7,12,17,22,27,32,37,42,47,52,57 * * * * /home/poker/goes16/conus_grb/run_vis_sqrt.sh
+#2,7,12,17,22,27,32,37,42,47,52,57 * * * * /home/poker/goes16/conus_grb/run_vis.sh
+#
+#13,28,43,58 * * * * /home/poker/goes16/fulldisk/run_vis.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldisk/run_vis_sqrt.sh
+# Superceded by fulldisk_grb 13,28,43,58 * * * * /home/poker/goes16/fulldisk/run_ir.sh
+# Superceded by fulldiskc_grb 13,28,43,58 * * * * /home/poker/goes16/fulldiskc/run_ir.sh
+# Superceded by fulldiskc_grb 13,28,43,58 * * * * /home/poker/goes16/fulldiskc/run_ircm.sh
+# all loop now
+#13,28,43,58 * * * * /home/poker/goes16/fulldisk_grb/run_ir.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldiskc_grb/run_irc.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldiskc_grb/run_ircm.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldisk_grb/run_ir13.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldiskc_grb/run_irc13.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldiskc_grb/run_irc13m.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldisk_grb/run_wv.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldiskc_grb/run_wvc.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldiskc_grb/run_wvl.sh
+#13,28,43,58 * * * * /home/poker/goes16/fulldiskc_grb/run_wvh.sh
+# Superceded by fulldisk_grb 13,28,43,58 * * * * /home/poker/goes16/fulldisk/run_wv.sh
+##13,28,43,58 * * * * /home/poker/goes16/fulldisk/run_wvl.sh
+##13,28,43,58 * * * * /home/poker/goes16/fulldisk/run_wvh.sh
+###13,28,43,58 * * * * /home/poker/goes16/fulldiskc/run_wv.sh
+
+
+# North Pacific Maps
+#45 21 * * * /home/poker/npac/npac.tcsh 00
+#45 03 * * * /home/poker/npac/npac.tcsh 06
+#45 09 * * * /home/poker/npac/npac.tcsh 12
+#45 15 * * * /home/poker/npac/npac.tcsh 18

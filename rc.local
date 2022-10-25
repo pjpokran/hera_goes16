@@ -1,0 +1,32 @@
+#!/bin/bash
+# THIS FILE IS ADDED FOR COMPATIBILITY PURPOSES
+#
+# It is highly advisable to create own systemd services or udev rules
+# to run scripts during boot instead of using this file.
+#
+# In contrast to previous versions due to parallel execution during boot
+# this script will NOT be run after all other services.
+#
+# Please note that you must run 'chmod +x /etc/rc.d/rc.local' to ensure
+# that this script will be executed during boot.
+
+# CONUS NOAAPORT
+su - poker -c "/home/poker/goes16/conusc/run_conusc_ircm_loop.sh >& /home/poker/goes16/conusc/run_conusc_ircm_loop.out & "
+# on hagel su - poker -c "/home/poker/goes16/conusc/run_conusc_wv_loop.sh >& /home/poker/goes16/conusc/run_conusc_wv_loop.out & "
+# on hagel su - poker -c "/home/poker/goes16/conusc/run_conusc_wvl_loop.sh >& /home/poker/goes16/conusc/run_conusc_wvl_loop.out & "
+# on hagel su - poker -c "/home/poker/goes16/conusc/run_conusc_wvh_loop.sh >& /home/poker/goes16/conusc/run_conusc_wvh_loop.out & "
+su - poker -c "/home/poker/goes16/conusc/run_conusc_swir_loop.sh >& /home/poker/goes16/conusc/run_conusc_swir_loop.out & "
+su - poker -c "/home/poker/goes16/conusc/run_conusc_cirrus_loop.sh >& /home/poker/goes16/conusc/run_conusc_cirrus_loop.out & "
+su - poker -c "/home/poker/goes16/conusc/run_conusc_snowice_loop.sh >& /home/poker/goes16/conusc/run_conusc_snowice_loop.out & "
+su - poker -c "/home/poker/goes16/conusc/run_conusc_cldpartsize_loop.sh >& /home/poker/goes16/conusc/run_conusc_cldpartsize_loop.out & "
+# on hagel su - poker -c "/home/poker/goes16/conusc_4panel/run_conusc_wv_4panel_loop.sh >& /home/poker/goes16/conusc_4panel/run_conusc_wv_4panel_loop.out & "
+
+# FULLDISK NOAAPORT (visible)
+su - poker -c "/home/poker/goes16/fulldisk/run_fulldisk_vis_loop.sh >& /home/poker/goes16/fulldisk/run_fulldisk_vis_loop.out & "
+# FULLDISK GRB
+su - poker -c "/home/poker/goes16/fulldiskc_grb/run_fulldisk_IR14_loop.sh >& /home/poker/goes16/fulldiskc_grb/run_fulldisk_IR14_loop.out & "
+su - poker -c "/home/poker/goes16/fulldiskc_grb/run_fulldisk_IR13_loop.sh >& /home/poker/goes16/fulldiskc_grb/run_fulldisk_IR13_loop.out & "
+su - poker -c "/home/poker/goes16/fulldiskc_grb/run_fulldisk_wvc_loop.sh >& /home/poker/goes16/fulldiskc_grb/run_fulldisk_wvc_loop.out & "
+su - poker -c "/home/poker/goes16/fulldiskc_grb/run_fulldisk_wvh_loop.sh >& /home/poker/goes16/fulldiskc_grb/run_fulldisk_wvh_loop.out & "
+su - poker -c "/home/poker/goes16/fulldiskc_grb/run_fulldisk_wvl_loop.sh >& /home/poker/goes16/fulldiskc_grb/run_fulldisk_wvl_loop.out & "
+touch /var/lock/subsys/local

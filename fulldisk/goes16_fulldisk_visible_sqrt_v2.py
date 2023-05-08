@@ -179,7 +179,8 @@ proj = ccrs.Geostationary(central_longitude=-75.2,
 image_rows=f.product_rows
 image_columns=f.product_columns
 namer_image_crop_top=0
-namer_image_crop_bottom=-800
+#namer_image_crop_bottom=-800
+namer_image_crop_bottom=-1
 namer_image_crop_left=133
 namer_image_crop_right=-467
 
@@ -6453,13 +6454,13 @@ from matplotlib import patheffects
 outline_effect = [patheffects.withStroke(linewidth=2, foreground='black')]
 
 #2017/065 20:04:00:30
-text = ax.text(0.005, 0.90, time_string,
+text = ax.text(0.005, 0.87, time_string,
     horizontalalignment='left', transform = ax.transAxes,
     color='yellow', fontsize='small', weight='bold')
 
 text.set_path_effects(outline_effect)
 
-text2 = ax2.text(0.005, 0.92, time_string,
+text2 = ax2.text(0.005, 0.80, time_string,
     horizontalalignment='left', transform = ax2.transAxes,
     color='yellow', fontsize='small', weight='bold')
 
@@ -6469,7 +6470,7 @@ text2.set_path_effects(outline_effect)
 #    horizontalalignment='center', transform = ax3.transAxes,
 #    color='yellow', fontsize='large', weight='bold')
 
-text9 = ax9.text(0.005, 0.92, time_string,
+text9 = ax9.text(0.005, 0.85, time_string,
     horizontalalignment='left', transform = ax9.transAxes,
     color='yellow', fontsize='large', weight='bold')
 
@@ -6483,8 +6484,10 @@ filename2="/whirlwind/goes16/vis_sqrt/fulldisk/"+dt+"_fulldisk.jpg"
 filename9="/whirlwind/goes16/vis_sqrt/fulldisk_full/"+dt+"_fulldisk_full.jpg"
 
 fig.figimage(aoslogo,  0, fig.bbox.ymax - aoslogoheight - 28  , zorder=10)
-fig2.figimage(aoslogo,  0, fig.bbox.ymax - aoslogoheight + 156  , zorder=10)
-fig9.figimage(aoslogo,  0, fig.bbox.ymax - aoslogoheight + 780  , zorder=10)
+#fig2.figimage(aoslogo,  0, fig.bbox.ymax - aoslogoheight + 156  , zorder=10)
+fig2.figimage(aoslogo,  0, 536  , zorder=10)
+#fig9.figimage(aoslogo,  0, fig.bbox.ymax - aoslogoheight + 780  , zorder=10)
+fig9.figimage(aoslogo,  0, 840  , zorder=10)
 
 fig.savefig(filename1, bbox_inches='tight', pad_inches=0)
 fig2.savefig(filename2, bbox_inches='tight', pad_inches=0)
